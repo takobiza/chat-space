@@ -114,11 +114,11 @@
                 }
             }
 
-            a {
+            &__edit {
                 text-decoration: none;
                 color: $lightblue;
 
-                .main-header__edit-btn {
+                &-btn {
                     height: 40px;
                     line-height: 40px;
                     padding: 0 20px;
@@ -169,14 +169,14 @@
             padding: 20px 40px;
             background-color: $whitegray;
 
-            form {
+            .input {
                 display: flex;
 
-                .input-box {
+                &-box {
                     position: relative;
                     width: 100%;
 
-                    .input-box__image {
+                    &__image {
                         font-size: 1.3rem;
                         position: absolute;
                         top: 10px;
@@ -184,7 +184,7 @@
                         cursor: pointer;
                     }
 
-                    .input-box__text {
+                    &__text {
                         height: 50px;
                         width: 100%;
                         padding: 0 40px 0 10px;

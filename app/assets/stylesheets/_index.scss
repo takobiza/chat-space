@@ -1,0 +1,208 @@
+* {
+    box-sizing: border-box;
+
+    header {
+        position: fixed;
+        background-color: $lightblue;
+        color: $white;
+        text-align: center;
+        height: 25px;
+        width: 100%;
+    }
+
+    .side {
+        height: 100vh;
+        width: 300px;
+        background-color: $bluegray;
+        color: $white;
+        float: left;
+
+        &-header {
+            background-color: $navy;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+
+            &__box {
+                height: 26px;
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                font-weight: bold;
+
+                &__user-name {
+                    display: inline-block;
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+
+                &__menu {
+                    display: flex;
+
+                    &__edit-user {
+                        .fa-edit {
+                            color: $white;
+                        }
+                    }
+
+                    &__new-group {
+                        padding-left: 5px;
+
+                        .fa-cog {
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-groups {
+            height: calc(100vh - 100px);
+            background-color: $bluegray;
+            padding: 20px 20px 0;
+            overflow: scroll;
+
+            a {
+                color: white;
+                text-decoration: none;
+            }
+
+            &__group {
+                margin-bottom: 40px;
+
+                &-name {
+                    font-size: 15px;
+                    margin-bottom: 5px;
+                }
+
+                &-message {
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+
+    .main {
+        width: calc(100vw - 300px);
+        float: left;
+
+        &-header {
+            height: 100px;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: solid 1px $whitegray;
+
+            &__box {
+                margin-top: 35px;
+
+                &__current-group {
+                    font-size: 20px;
+                    color: $black;
+                    margin-bottom: 15px;
+                }
+
+                &__member-list {
+                    display: flex;
+                    font-size: 12px;
+                    color: $gray;
+
+                    &__member {
+                        margin-left: 3px;
+                    }
+                }
+            }
+
+            a {
+                text-decoration: none;
+                color: $lightblue;
+
+                .main-header__edit-btn {
+                    height: 40px;
+                    line-height: 40px;
+                    padding: 0 20px;
+                    margin-top: 30px;
+                    border: solid 1px $lightblue;
+                }
+            }
+        }
+
+        .messages {
+            height: calc(100vh - 190px);
+            padding: 46px 40px;
+            background-color: $lightgray;
+            overflow: scroll;
+            max-height: 631px;
+
+            &__message {
+                margin-bottom: 40px;
+
+                &-info {
+                    display: flex;
+                    margin-bottom: 10px;
+
+                    &__talker {
+                        color: $blackgray;
+                        font-size: 16px;
+                        font-weight: bold;
+                        display: inline-block;
+                    }
+
+                    &__date {
+                        font-size: 12px;
+                        padding-left: 10px;
+                        color: $gray;
+                        display: inline-block;
+                    }
+                }
+
+                &__text {
+                    color: $blackgray;
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .form {
+            height: 90px;
+            padding: 20px 40px;
+            background-color: $whitegray;
+
+            form {
+                display: flex;
+
+                .input-box {
+                    position: relative;
+                    width: 100%;
+
+                    .input-box__image {
+                        font-size: 1.3rem;
+                        position: absolute;
+                        top: 10px;
+                        right: 10px;
+                        cursor: pointer;
+                    }
+
+                    .input-box__text {
+                        height: 50px;
+                        width: 100%;
+                        padding: 0 40px 0 10px;
+                        color: $blackgray;
+                        border-style: none;
+                    }
+                }
+
+                .submit-btn {
+                    width: 100px;
+                    height: 50px;
+                    padding: 0 30px;
+                    margin-left: 15px;
+                    background-color: $lightblue;
+                    color: white;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

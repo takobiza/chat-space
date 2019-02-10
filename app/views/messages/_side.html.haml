@@ -1,0 +1,24 @@
+.side
+  .side-header
+    .side-header__box
+      %p.side-header__box__user-name takumi
+      %ul.side-header__box__menu
+        %li.side-header__box__menu__edit-user
+          = link_to "#", method: :get do
+            %i.fa.fa-edit
+        %li.side-header__box__menu__new-group
+          = link_to "#", method: :get do
+            %i.fa.fa-cog
+  .side-groups
+    = link_to "#", method: :get do
+      .side-groups__group
+        %p.side-groups__group-name グループ1
+        %p.side-groups__group-message まだメッセージがありません
+    = link_to "#", method: :get do
+      .side-groups__group
+        %p.side-groups__group-name グループ2
+        %p.side-groups__group-message まだメッセージがありません
+    = link_to "#", method: :get do
+      .side-groups__group
+        %p.side-groups__group-name グループ１
+        %p.side-groups__group-message まだメッセージがありません

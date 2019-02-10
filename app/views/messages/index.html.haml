@@ -1,0 +1,25 @@
+= render partial: 'header'
+= render partial:'side'
+.main
+  .main-header
+    .main-header__box
+      %h2.main-header__box__current-group
+        sampleグループ
+      %ul.main-header__box__member-list
+        Member：
+        %li.main-header__box__member-list__member takumi
+        %li.main-header__box__member-list__member kozaki
+    %a{:href => ""}
+      .main-header__edit-btn Edit
+  .messages
+    .messages__message
+      .messages__message-info
+        %p.messages__message-info__talker takumi
+        %p.messages__message-info__date 2019/02/08(Fri) 09:17:42
+      %p.messages__message__text ペチャクチャ
+    .messages__message
+      .messages__message-info
+        %p.messages__message-info__talker kozaki
+        %p.messages__message-info__date 2019/02/08(Fri) 09:17:48
+      %p.messages__message__text ペチャクチャ
+  = render partial: 'form'

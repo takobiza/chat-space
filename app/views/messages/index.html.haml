@@ -1,14 +1,15 @@
-= render partial:'side'
+= render 'shared/side'
 .main
   .main-header
     .main-header__box
       %h2.main-header__box__current-group
-        sampleグループ
+        = @group.name
       %ul.main-header__box__member-list
         Member：
-        %li.main-header__box__member-list__member takumi
-        %li.main-header__box__member-list__member kozaki
-    = link_to "#", method: :get ,class: "main-header__edit" do
+        - @group.members.each do |member|
+          %li.main-header__box__member-list__member
+            = member.user.nickname
+    = link_to edit_group_path(@group), method: :get ,class: "main-header__edit" do
       .main-header__edit-btn Edit
   .messages
     .messages__message

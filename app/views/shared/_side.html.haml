@@ -16,4 +16,5 @@
         .side-groups__group
           %p.side-groups__group-name
             = group.name
-          %p.side-groups__group-message まだメッセージがありません
+            %p.side-groups__group-message
+              = group.show_last_message

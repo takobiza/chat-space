@@ -1,11 +1,9 @@
 function messageBuildHTML(message) {
-  if(message.image !== null) {
-    var image = `<p class="messages__message__text">
-                    <img src=${message.image} alt="image" width="330" height="330">
-                </p>`;
-  }else {
-    var image = ``;
-  }
+
+  var image = (message.image !== null) ? `<p class="messages__message__text">
+                    <img src=${message.image} alt="image" width="200" height="200">
+                    </p>` : ``;
+
   var messagehtml = `<div class="messages__message">
                   <div class = "messages__message-info">
                   <p class="messages__message-info__talker">
@@ -46,7 +44,7 @@ $(document).on('turbolinks:load', function() {
       ScrollDown()
       $('.input')[0].reset();
       var html = messageBuildHTML(data);
-      $('.messages').append(html);
+      $('.messages__scroll').append(html);
     })
     .fail(function() {
       alert('error');

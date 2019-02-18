@@ -12,7 +12,8 @@
     = link_to edit_group_path(@group), method: :get ,class: "main-header__edit" do
       .main-header__edit-btn Edit
   .messages
-    = render @messages
+    .messages__scroll
+      = render @messages
   .form
     = form_for [@group, @message], html: {class: 'input'} do |f|
       .input-box

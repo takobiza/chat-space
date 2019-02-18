@@ -1,5 +1,5 @@
 class MessagesController < ApplicationController
-  before_action :set_groups, only:[:index, :create]
+  before_action :set_group, only:[:index, :create]
 
   def index
     @message = Message.new
@@ -26,7 +26,7 @@ class MessagesController < ApplicationController
     params.require(:message).permit(:body, :image).merge(user_id: current_user.id)
   end
 
-  def set_groups
+  def set_group
     @group = Group.find(params[:group_id])
   end
 

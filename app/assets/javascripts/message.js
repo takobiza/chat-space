@@ -4,7 +4,7 @@ function messageBuildHTML(message) {
                     <img src=${message.image} alt="image" width="200" height="200">
                     </p>` : ``;
 
-  var messagehtml = `<div class="messages__message" data-message-id=${message.id}>
+  var messageHTML = `<div class="messages__message" data-message-id=${message.id}>
                   <div class = "messages__message-info">
                   <p class="messages__message-info__talker">
                    ${message.nickname}
@@ -19,7 +19,7 @@ function messageBuildHTML(message) {
                   ${image}
                   </div>
                   `
-  return messagehtml;
+  return messageHTML;
 }
 
 function ScrollDown() {

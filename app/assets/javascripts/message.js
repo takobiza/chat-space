@@ -28,7 +28,7 @@ function ScrollDown() {
    }, 600);
  };
 
-function update(){
+function updateMessage(){
     var message_id = $('.messages__message').last().data('message-id');
     $.ajax({
       url: location.pathname,
@@ -74,7 +74,7 @@ $(document).on('turbolinks:load', function() {
 
   $(function(){
     if (location.pathname.match(/\/groups\/\d+\/messages/)){
-      setInterval(update, 10000);
+      setInterval(updateMessage, 10000);
     }
   });
 });

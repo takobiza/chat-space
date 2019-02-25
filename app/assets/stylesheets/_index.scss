@@ -18,7 +18,7 @@
             &__box {
                 height: 26px;
                 display: flex;
-                justify-content: space-between;
+                justify-content:space-between;
                 width: 100%;
                 font-weight: bold;
 
@@ -184,6 +184,17 @@
                         color: $blackgray;
                         border-style: none;
                     }
+
+                    &__link{
+
+                        &-icon{
+                            font-size: 1.3rem;
+                            position: absolute;
+                            top: 28px;
+                            right: -146px;
+                            cursor: pointer;
+                        }
+                    }
                 }
 
                 .submit-btn {
@@ -199,3 +210,4 @@
         }
     }
 }
+

@@ -7,6 +7,9 @@ class MessagesController < ApplicationController
     respond_to do |format|
       format.html
       format.json { @new_message = @messages.where('id > ?', params[:id]) }
+      format.csv do
+        send_data render_to_string, filename: "#{@group.name}.csv", type: :csv
+      end
     end
   end
 

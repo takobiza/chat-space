@@ -21,5 +21,8 @@
         = f.label :image, class: 'input-box__image' do
           = fa_icon 'picture-o', class: 'icon'
           = f.file_field :image, class: 'hidden'
+        = link_to group_messages_path(format: :csv),class: 'input-box__link'do
+          = fa_icon 'file', class: 'input-box__link-icon'
+
       = f.submit 'Send', class: 'submit-btn'
 

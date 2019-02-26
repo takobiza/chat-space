@@ -19,3 +19,4 @@
               = f.password_field :password, autocomplete: "off"
           .actions
             = f.submit "Log in", class: 'btn'
+          = link_to "twitterでログイン", user_twitter_omniauth_authorize_path, class: 'twitter-btn'
